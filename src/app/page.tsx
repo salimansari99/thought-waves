@@ -1,103 +1,237 @@
-import Image from "next/image";
+"use client";
+import Banner from "./components/banner";
+import Card from "./components/card";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <Banner />
+
+        <div className="single-blog">
+          <img className="single-blog-img" src="/images/ai1.png" alt="" />
+          <div className="single-blog-desc">
+            <div className="tag-date">
+              <p className="tag">Travel</p>
+              <p className="date">13 March 2023</p>
+            </div>
+            <h1 className="heading">How AI will Change the Future</h1>
+            <p className="desc">
+              our blogs are written from very research research and well known
+              writers writers so that we can provide you the best blogs and
+              articles articles for you to read them all along
+            </p>
+            <a href="/" className="rd-mr-btn">
+              Read more
+            </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className="popular-blogs">
+          <div className="pop-blogs-top">
+            <h4 className="ttl">Our Recent Post</h4>
+            <a href="/blogs" className="view-all">
+              View All
+            </a>
+          </div>
+          <div className="recent-top">
+            <div className="recent-right">
+              <img
+                className="feature-img"
+                src="/images/featured-img.png"
+                alt=""
+              />
+            </div>
+            <div className="recent-left">
+              <div className="tag-date">
+                <p className="tag">Travel</p>
+                <p className="date">13 March 2023</p>
+              </div>
+              <h1 className="heading">How AI will Change the Future</h1>
+              <p className="desc">
+                our blogs are written from very research research and well known
+                writers writers so that we can provide you the best blogs and
+                articles articles for you to read them all along
+              </p>
+              <a href="/" className="rd-mr-btn">
+                Read more
+              </a>
+            </div>
+          </div>
+          <div className="pop-list">
+            <Card url="/" />
+            <Card url="/" />
+            <Card url="/" />
+            <Card url="/" />
+          </div>
+        </div>
+
+        <div className="popular-blogs">
+          <div className="pop-blogs-top">
+            <h4 className="ttl">Popular Post</h4>
+            <a href="/blogs" className="view-all">
+              View All
+            </a>
+          </div>
+          <div className="pop-list">
+            <Card url="/" />
+            <Card url="/" />
+            <Card url="/" />
+            <Card url="/" />
+            <Card url="/" />
+            <Card url="/" />
+            <Card url="/" />
+            <Card url="/" />
+          </div>
+        </div>
+      <style jsx>{`
+        .single-blog {
+          width: 50%;
+          height: auto;
+          margin: 24px auto;
+          position: relative;
+        }
+        .single-blog .single-blog-img {
+          width: 100%;
+          height: 360px;
+        }
+        .single-blog-desc {
+          content: "";
+          position: absolute;
+          width: 75%;
+          border-radius: 12px;
+          padding: 10px;
+          background: #f3f3f3;
+          bottom: -90px;
+          right: 0;
+        }
+
+        .tag-date {
+          display: flex;
+          justify-content: flex-start;
+          gap: 8px;
+        }
+        .tag {
+          font-weight: bold;
+          font-size: 18px;
+        }
+        .date {
+          font-weight: 500;
+          font-size: 18px;
+        }
+        .popular-blogs {
+          width: 80%;
+          margin: 0 auto;
+        }
+
+        .heading {
+          font-weight: bold;
+          font-size: 28px;
+          margin-bottom: 5px;
+        }
+
+        .desc {
+          color: #000;
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
+        .rd-mr-btn {
+          font-size: 14px;
+          background: #f3f3f3;
+          color: #7c4ee4;
+          border: 1px solid #7c4ee4;
+          font-size: 18px;
+          padding: 5px 10px;
+          display: inline-block;
+          border-radius: 8px;
+        }
+        .rd-mr-btn:hover {
+          color: #f3f3f3;
+          background: #7c4ee4;
+        }
+
+        .recent-top {
+          display: flex;
+          width: 100%;
+          margin: 12px auto;
+          gap: 18px;
+        }
+        .recent-left {
+          width: 49%;
+          padding: 12px 36px;
+        }
+        .recent-right {
+          width: 49%;
+          flex-shrink: 0;
+        }
+        .recent-right img {
+          width: 100%;
+          height: 360px;
+        }
+
+        .pop-blogs-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 116px 0 18px 0;
+        }
+        .ttl {
+          color: #000;
+          font-weight: bold;
+          font-size: 24px;
+        }
+        .view-all {
+          display: inline-block;
+          padding: 5px 18px;
+          background: #7c4ee4;
+          border-radius: 8px;
+          color: #fff;
+        }
+        .view-all:hover {
+          background: #6329e7;
+        }
+        .pop-list {
+          display: flex;
+          justify-content: flex-start;
+          gap: 16px;
+          flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+          .pop-list {
+            flex-direction: column;
+          }
+        }
+      `}</style>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .single-blog {
+            width: 100%;
+          }
+          .single-blog .single-blog-img {
+            height: auto;
+          }
+          .single-blog-desc {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+          }
+          .popular-blogs {
+            width: 100%;
+            padding: 5px;
+          }
+          .recent-top {
+            flex-direction: column;
+          }
+          .recent-right,
+          .recent-left {
+            width: 100%;
+          }
+          .recent-left {
+            padding: 5px;
+          }
+        }
+      `}</style>
+    </>
   );
 }

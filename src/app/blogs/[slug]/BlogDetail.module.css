@@ -1,0 +1,143 @@
+.blogDetailContainer {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.tagDate {
+  display: flex;
+  gap: 16px;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #555;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-weight: 600;
+  color: #7C4EE4;
+}
+
+.date {
+  font-weight: 400;
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 16px 0;
+}
+
+.featureImg1 {
+  width: 100%;
+  margin: 24px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.featureImg2 {
+  width: 70%;
+  margin: 24px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.featureImg1 img,
+.featureImg2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.desc {
+  margin: 20px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.quoteContainer {
+  border-left: 4px solid #7C4EE4;
+  background: #f9f7ff;
+  padding: 16px 20px;
+  margin: 32px 48px;
+  border-radius: 6px;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.quoteAuthor {
+  text-align: right;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Popular Blogs Section */
+.popularBlogs {}
+
+.popBlogsTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 116px 0 18px 0;
+}
+
+.ttl {
+  color: #000;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.viewAll {
+  display: inline-block;
+  padding: 5px 10px;
+  background: #7C4EE4;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.viewAll:hover {
+  background: #6329e7;
+}
+
+.popList {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 24px;
+  }
+
+  .desc {
+    font-size: 15px;
+  }
+
+  .quote {
+    font-size: 16px;
+  }
+
+  .tagDate {
+    flex-direction: column;
+    font-size: 13px;
+    gap: 4px;
+  }
+
+  .popList {
+    flex-direction: column;
+  }
+}
